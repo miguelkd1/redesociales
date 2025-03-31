@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Heiner Moreno Consultoría Odontológica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        background: #4e4e4e;
+    }
+</style>
+<body>
+    <div class="encabezado">
+        <a href="index.html" class="index-button">Inicio</a>
+        <a href="sobre.html" class="sobre-button">Sobre</a>
+        <a href="contacto.html" class="contacto-button">Contacto</a>
+    </div>
+    
+    <div class="contenedor">
+        <h1>Contáctanos</h1>
+        
+        <div class="seccion-sobre">
+            <h2>Agenda tu Cita</h2>
+            <p>Completa el siguiente formulario y nos pondremos en contacto contigo a la brevedad para confirmar tu cita.</p>
+            
+            <form id="contactForm" class="formulario-contacto" method="post" action="procesar_contacto.php">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo*</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono*</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sede">Sede de preferencia*</label>
+                    <select id="sede" name="sede" required>
+                        <option value="">Selecciona una sede</option>
+                        <option value="Cúcuta">Cúcuta</option>
+                        <option value="Bogotá">Bogotá</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="servicio">Servicio de interés*</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option value="Consulta General">Consulta General</option>
+                        <option value="Odontología Estética">Odontología Estética</option>
+                        <option value="Ortodoncia">Ortodoncia</option>
+                        <option value="Implantes Dentales">Implantes Dentales</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fecha">Fecha preferida</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje o comentarios adicionales</label>
+                    <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Enviar Solicitud</button>
+                </div>
+                
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </div>
+        
+        <div class="seccion-sobre">
+            <h2>Información de Contacto</h2>
+            
+            <div class="contacto-info">
+                <div class="contacto-sede">
+                    <h3>Sede Cúcuta</h3>
+                    <p><strong>Dirección:</strong> Av. Principal #123, Cúcuta</p>
+                    <p><strong>Teléfono:</strong> (123) 456-7890</p>
+                    <p><strong>Horario:</strong> Lunes a Viernes 8:00 AM - 6:00 PM</p>
+                </div>
+                
+                <div class="contacto-sede">
+                    <h3>Sede Bogotá</h3>
+                    <p><strong>Dirección:</strong> Calle 85 #45-30, Bogotá</p>
+                    <p><strong>Teléfono:</strong> (123) 456-7891</p>
+                    <p><strong>Horario:</strong> Lunes a Sábado 8:00 AM - 7:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="auto-reload.js"></script>
+    <script src="contacto.js"></script>
+</body>
+</html>
